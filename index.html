@@ -8,11 +8,12 @@
     </head>
 
 <body>
-    <py-script>
-        from datetime import datetime
-        now = datetime.now()
-        print("now.strftime == ", now.strftime("%m/%d/%Y, %H:%M:%S"))
-        import sys
-        print("sys.version == ", sys.version)
-    </py-script>
-  </body>
+<py-script>
+import sys
+from pyscript import display
+
+
+display(sys.version)
+</py-script>
+
+</body>
