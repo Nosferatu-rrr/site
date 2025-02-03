@@ -16,7 +16,8 @@ now = datetime.now()
 display(now.strftime("%m/%d/%Y, %H:%M:%S"))
 display(sys.version)
 installed_packages = list(sys.modules.keys())
-display(installed_packages)
+for package in installed_packages:
+    display(package)
 </py-script>
 
 </body>
