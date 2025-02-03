@@ -15,10 +15,11 @@ from datetime import datetime
 now = datetime.now()
 display(now.strftime("%m/%d/%Y, %H:%M:%S"))
 display(sys.version)
-import pkg_resources
-for dist in pkg_resources.working_set:
-    display(dist.project_name)
-    #display(dist.project_name, dist.version)
+import subprocess
+result = subprocess.run(['pip', 'list'], capture_output=True, text=True)
+packages = result.stdout.splitlines()
+for package in packages:
+    display(package)
 </py-script>
 
 </body>
