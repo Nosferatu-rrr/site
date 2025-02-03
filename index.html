@@ -17,7 +17,8 @@ display(now.strftime("%m/%d/%Y, %H:%M:%S"))
 display(sys.version)
 import pkg_resources
 for dist in pkg_resources.working_set:
-    display(dist.project_name, dist.version)
+    display(dist.project_name)
+    #display(dist.project_name, dist.version)
 </py-script>
 
 </body>
